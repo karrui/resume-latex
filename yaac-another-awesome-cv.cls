@@ -1,6 +1,6 @@
 %% Copyright 2016 Christophe Roger
 %
-% Author: 
+% Author:
 % Christophe Roger (Darwiin)
 %
 % This work may be distributed and/or modified under the
@@ -12,10 +12,10 @@
 % version 2005/12/01 or later.
 %
 % This work has the LPPL maintenance status `maintained'.
-% 
+%
 % The Current Maintainer of this work is M. C. Roger.
 %
-% This work consists of the files awesome-source-cv.cls 
+% This work consists of the files awesome-source-cv.cls
 
 \ProvidesClass{yaac-another-awesome-cv}[2018/07/19  v1.9.2 'YAAC: Another Awesome CV' Class]
 
@@ -56,7 +56,7 @@
 
 % Dependences
 %A Few Useful Packages
-\RequirePackage[english,french]{babel}
+\RequirePackage[english]{babel}
 \RequirePackage[utf8]{luainputenc}
 \RequirePackage{fontspec} 					                 % for loading fonts
 \RequirePackage{url,parskip} 	    % other packages for formatting
@@ -68,7 +68,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{array}
 \RequirePackage{enumitem}
-\RequirePackage{longtable} 	
+\RequirePackage{longtable}
 \RequirePackage{etoolbox}
 \RequirePackage{tikz}
 \RequirePackage[skins]{tcolorbox}
@@ -130,8 +130,8 @@
 \titlespacing{\section}{0pt}{2pt}{2pt}
 
 % Configure list
-\setlist[itemize,1]{label=\faAngleRight, nosep, leftmargin=2em} 
-\setlist[itemize,2]{label=\faAngleRight, nosep, leftmargin=1.5em} 
+\setlist[itemize,1]{label=\faAngleRight, nosep, leftmargin=2em}
+\setlist[itemize,2]{label=\faAngleRight, nosep, leftmargin=1.5em}
 
 % Setup Array : new column type
 \newcolumntype{R}[1]{>{\hfill}m{#1}}
@@ -148,13 +148,13 @@
 {
   %\setmainfont[BoldFont = Helvetica Neue, ItalicFont=Helvetica Neue Thin Italic ,SmallCapsFont = Helvetica Neue Light]{Helvetica Neue Thin}
   \setmainfont{Source Sans Pro Light}[
-    BoldFont = SourceSansPro-Regular, 
+    BoldFont = SourceSansPro-Regular,
     ItalicFont= Source Sans Pro Light Italic]
 }
 {
   \setmainfont{SourceSansPro-Light}[
-    Path = fonts/, 
-    BoldFont = SourceSansPro-Regular, 
+    Path = fonts/,
+    BoldFont = SourceSansPro-Regular,
     ItalicFont = SourceSansPro-LightIt]
 }
 
@@ -224,11 +224,11 @@
 
 % Render author's linked-in (optional)
 % Usage: \linkedin{<linked-in-nick>}
-\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1/fr}{linkedin.com/in/#1}}
+\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1/}{linkedin.com/in/#1}}
 
 % Render author's viadeo(optional)
 % Usage: \viadeo{<viadeo-nick>}
-\newcommand*{\viadeo}[1]{\sociallink{\viadeoSymbol}{http://www.viadeo.com/fr/profile/#1}{viadeo.com/fr/profile/#1}} 
+\newcommand*{\viadeo}[1]{\sociallink{\viadeoSymbol}{http://www.viadeo.com/fr/profile/#1}{viadeo.com/fr/profile/#1}}
 
 % Render author's github (optional)
 % Usage: \github{<github-nick>}
@@ -244,7 +244,7 @@
 
 % Render author's mobile phone (optional)
 % Usage: \smartphone{<mobile phone number>}
-\newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}    
+\newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}
 
 % Render author's tagline
 \newcommand\resumetitle[1]{
@@ -299,7 +299,6 @@
         \idphoto
       \end{minipage}
     }{}
-    \bigskip
   }
 }
 
@@ -319,30 +318,30 @@
 \newenvironment{keywords}{%
   \renewcommand{\arraystretch}{1.1}
 
-  \begin{tabular}{>{}r>{}p{13cm}} 
+  \begin{tabular}{>{}r>{}p{13cm}}
 }{%
   \end{tabular}
 }
 
-% Render a scholarshipentry in the scolarship environment
-% Usage: \scholarshipentry{<date>}{<description>}
+% Render a educationentry in the education environment
+% Usage: \educationentry{<date>}{<description>}
 \newcommand\keywordsentry[2]{
-  \textbf{#1} &   #2\\ 
+  \textbf{#1} &   #2\\
 }
 
 % Define a new column type for the scholarship environment
 \newcolumntype{Y}{>{\raggedleft}p{\leftcolumn}}
 
-% Define the 'scholarship' environment
-\newenvironment{scholarship}{%
+% Define the 'education' environment
+\newenvironment{education}{%
   \begin{tabular}{Y p{\rightcolumnlength}}
 }{%
   \end{tabular}
 }
 
-% Render a scholarshipentry in the scolarship environment
-% Usage: \scholarshipentry{<date>}{<description>}
-\newcommand\scholarshipentry[2]{
+% Render a educationentry in the education environment
+% Usage: \educationentry{<date>}{<description>}
+\newcommand\educationentry[2]{
   #1    &  #2 \\
 }
 
@@ -369,7 +368,7 @@
 }
 
 % Render an experience in the experiences environment
-% Usage: 
+% Usage:
 % \experience
 %  {<End date>}      {<Title>}{<Enterprise>}{<Country>}
 %  {<Start date}     {
@@ -378,14 +377,16 @@
 %                    {<Technology list>}
 \newcommand\experience[7]{
   \textbf{#1}    & \textbf{#2, \textsc{#3}, #4}   								\\*
+  \smallskip
   \textbf{#5}    & \begin{minipage}[t]{\rightcolumnlength}
   					         #6
                    \end{minipage}										\\*
+                   \smallskip
                  & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
   }
 
 % Render a consultant experience in the experiences environment
-% Usage: 
+% Usage:
 % \consultantexperience
 %  {<End date>}      {<Consultant title>}{<Consulting Enterprise>}{<Country>}
 %  {<Start date}     {<Client title>}{<Client business unit>}
@@ -421,7 +422,7 @@
 \newcommand\project[5]{
   \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
     \textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
-    #3\\
+    #3\smallskip\\
     #4\smallskip\\
     \footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
   \end{minipage}
@@ -452,7 +453,7 @@
     \begin{tabular}{>{}l >{}l}
       \multicolumn{2}{l}{\textbf{#1}}\\
       \multicolumn{2}{l}{\emph{#2}, \textsc{#3}}\\
-      \quad \mailSymbol & \href{mailto:#4}{#4} \\  
+      \quad \mailSymbol & \href{mailto:#4}{#4} \\
       \quad \faPhone & #5 \\
     \end{tabular}
   \end{minipage}%
