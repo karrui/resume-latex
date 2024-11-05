@@ -41,7 +41,7 @@
     \else {\smallskip\par\textbf\subsection@org\hfill\subsection@location}
     \fi
     \ifx\subsection@position\empty {}
-    \else {\par{\em\subsection@position}\hfill{\em\subsection@duration}}
+    \else {\par{\em\textbf\subsection@position}\hfill{\em\subsection@duration}}
     \fi
 }{
    
