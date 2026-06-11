@@ -100,40 +100,46 @@
 
 \begin{entrylist}
 	\entry
-		{Feb 2020 -- Now\\\footnotesize{fulltime}}
+		{Apr 2024 -- Now\\\footnotesize{fulltime}}
+		{Lead Software Engineer}
+		{\href{https://open.gov.sg}{Open Government Products}}
+		{
+			\begin{itemize}[noitemsep, leftmargin=1.25em]
+				\item Evolved the org's internal design system (which I built and maintained) into \underline{\href{https://oui.open.gov.sg}{oui}}, an SSR-compatible successor with 36+ accessible components for Next.js App Router -- now the default design system for newly created products in the organisation.
+				\item Diagnosed \underline{\href{https://ask.gov.sg}{ask.gov.sg}}'s EOL framework (RemixJS~v1) as a maintainability and open-source risk; led a full 4-month technical rewrite through influence rather than positional authority -- zero regressions, with measurable improvements to performance and SEO; architecture patterns extracted into the org-wide \underline{\href{https://github.com/opengovsg/starter-kit}{Starter Kit}}, now the default starting point for newly created products in the organisation.
+				\item Inherited \underline{\href{https://maps.gov.sg}{maps.gov.sg}} as a hackathon POC with unresolved production gaps; hardened it with queuing, auth middleware, and rate limiting, sustaining 20$\times$ growth (25k$\to$502k views) without app-level incidents; clean handoff resulted in product being promoted to a full dedicated team.
+				\item Built an internal CLI tool to replace multi-day manual infra provisioning; generates isolated, production-ready AWS environments with CI/CD in $\sim$10~min -- adopted as the standard for new product infrastructure across the organisation.
+				\item Embedded in the \underline{\href{https://github.com/opengovsg/isomer}{Isomer}} rebuild to establish engineering foundations; set up CI/CD, introduced Storybook and Chromatic for design--engineer handoff, and instituted lightweight ADRs for knowledge transfer; rebuilt components to high accessibility standards -- practices fully adopted by the team and persisted after handoff.
+				\item Drove org-wide test coverage reporting to Datadog, creating accountability for CI adoption and surfacing maintainability signals across all product teams.
+			\end{itemize}
+		\texttt{Next.js}\slashsep\texttt{React}\slashsep\texttt{TypeScript}\slashsep\texttt{Pulumi (AWS)}\slashsep\texttt{Design Systems}}
+	\entry
+		{Oct 2021 -- Apr 2024\\\footnotesize{fulltime}}
 		{Senior Software Engineer}
 		{\href{https://open.gov.sg}{Open Government Products}}
 		{
-      I mainly work on \underline{\href{https://form.gov.sg}{FormSG}}, an official Singapore Government's form builder application. I was also part of the team tasked to work on Singapore's COVID-19 response.
 			\begin{itemize}[noitemsep, leftmargin=1.25em]
-				\item Epic lead for a frontend framework migration from AngularJS to React for \underline{\href{https://github.com/opengovsg/formsg}{FormSG}}. 
-        \item Epic lead for an API migration, which includes renaming, simplifying, and refactoring endpoints to a more RESTful and meaningful state.
-        \item Spearheaded the creation of an internal design system, released as an \underline{\href{https://www.npmjs.com/package/@opengovsg/design-system-react}{npm package}} with close collaboration with the designers to achieve visual continuity and consistency across OGP products (eventually).
-        \item Promoted the use of Storybook and Chromatic as a visual regression testing and usage-guidelines tool to other software engineers.
-        \item Built the entire clinician-facing frontend application for Singapore's COVID-19 Appointment System to allow clinic staff to manage appointments and patients coming in for their vaccinations.
-        \item Wrote lambda pipelines to automate parts of patient and case management relating to Singapore's COVID-19 Endemic response.
+				\item Tech-led \underline{\href{https://active.gov.sg}{MyActiveSG+}} end-to-end, advocating for unified ownership over a proposed two-team split; built a working module prototype in one day that secured internal buy-in and countered a vendor lock-in, saving $\sim$S\$12M; drove the product through two pilots to public launch -- handling $\sim$150k bookings per month at handoff.
+				\item Led zero-downtime migration of \underline{\href{https://form.gov.sg}{FormSG}}'s frontend from AngularJS to React~17, eliminating a critical maintenance liability while keeping the service live throughout.
+				\item Authored the org's \underline{\href{https://github.com/opengovsg/camp-design-system}{internal design system}} (adopted by 70\% of live projects) and starter kit template (used to bootstrap 70\% of all products in 2024), converting institutional best practices into durable, reusable defaults.
 			\end{itemize}
-		\texttt{Node.js}\slashsep\texttt{React.js}\slashsep\texttt{TypeScript}\slashsep\texttt{JavaScript}\slashsep\texttt{Design Systems}}
+		\texttt{React}\slashsep\texttt{TypeScript}\slashsep\texttt{Node.js}\slashsep\texttt{Design Systems}}
+	\entry
+		{Feb 2020 -- Oct 2021\\\footnotesize{fulltime}}
+		{Software Engineer}
+		{\href{https://open.gov.sg}{Open Government Products}}
+		{
+			\begin{itemize}[noitemsep, leftmargin=1.25em]
+				\item Led full TypeScript migration of \underline{\href{https://form.gov.sg}{FormSG}}'s REST API, refactoring to RESTful conventions and introducing end-to-end type safety across the entire backend.
+				\item Built the clinician-facing frontend for Singapore's national COVID-19 vaccination appointment system -- the primary interface for clinic staff managing patient vaccinations at scale.
+			\end{itemize}
+		\texttt{Node.js}\slashsep\texttt{TypeScript}\slashsep\texttt{React}}
 	\entry
 		{May -- Aug 2019\\\footnotesize{internship}}
 		{Software Engineer Intern, Google Pay}
 		{Google Singapore}
-		{Completed and had full ownership of a new feature in the (then) Android application, including but not limited to high level architecture, design decisions, implementation, and testing.
+		{Solely scoped, designed, and shipped a new end-to-end feature for the Google Pay Android application.
 		\\ \texttt{Java}\slashsep\texttt{Android}}
-	\entry
-		{May -- Aug 2018\\\footnotesize{internship}}
-		{Frontend Software Engineer Intern}
-		{\href{https://intelllex.com}{INTELLLEX}}
-		{
-			Implement features and components related to the design overhaul of the main enterprise React app. \\
-			In addition, I also refactored many tightly coupled components into pure functional components, resulting in improved readability and testability.
-			% % \setlist{nolistsep}
-    	% \begin{itemize}[noitemsep, leftmargin=1.25em]
-			% 	\item Implement features and components related to the design overhaul of the main enterprise app. 
-			% 	\item Refactor many tightly coupled components into pure functional components, resulting in improved readability and testability.
-			% \end{itemize}
-			\\ \texttt{JavaScript}\slashsep\texttt{React}
-		}
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
@@ -148,48 +154,6 @@
 		{B.Comp (Hons) in Computer Science}
 		{National University of Singapore}
 		{CAP: \textbf{4.45}/5.00, Honours (Distinction)}
-\end{entrylist}
-
-%----------------------------------------------------------------------------------------
-%	ADDITIONAL INFORMATION
-%----------------------------------------------------------------------------------------
-
-\cvsect{Side projects}
-
-\begin{entrylist}
-	\entry
-		{2020}
-		{Reify\smallskip}{}
-		{
-			\smallskip
-			\iconlight{Apple}{\href{https://apps.apple.com/us/app/reify-achieve-saving-goals/id1499847703}{iOS Appstore}}\hspace{1cm}
-			\iconlight{Github}{\href{https://github.com/karrui/goals-flutter}{karrui/goals-flutter}} \\
-			A goal tracking app built with Flutter for users to track their goals.
-			Reify is an app that allows you to create virtual goals you can contribute to whenever you catch yourself having extra money. 
-      Built to explore a new programming language, and to try out designing a "native" app all by myself.
-			\\ \texttt{Flutter}\slashsep\texttt{Dart}\slashsep\texttt{Firebase}
-		}
-	\entry
-		{2018}
-		{CAP Calculator\smallskip}{}
-		{
-			\smallskip
-			\iconlight{ExternalLinkSquare}{\href{https://cap.karrui.dev}{cap.karrui.dev}}\hspace{1cm}
-			\iconlight{Github}{\href{https://github.com/karrui/cap-calculator}{karrui/cap-calculator}} \\
-			A TypeScript React application for NUS undergraduates to calculate their current CAP (Cumulative Average Point), helping them
-		to visualize what grades are needed to hit their goal, or what their current grade is.
-		\\ \texttt{TypeScript}\slashsep\texttt{React}\slashsep\texttt{Firebase}\slashsep\texttt{Netlify}
-		}
-	\entry
-		{2018}
-		{Static Program Analyser For SIMPLELang\smallskip}{}
-		{
-			\smallskip
-			\iconlight{Info}{Code privatised (due to school policy) but available on request} \\
-			A C++11 desktop static program analyser application. Worked extensively on the tokenizer and the parser for parsing the given 
-			input source code. Made sure code followed design principles such as Open-Closed Principle. Wrote unit, integration and system tests using equivalence partitioning.
-		\\ \texttt{C++11}
-		}
 \end{entrylist}
 
 % \begin{minipage}[t]{0.3\textwidth}
